@@ -1,6 +1,6 @@
 import { RiskDecisionResponse, TransactionItem, RiskLevel } from "@/types/fraud";
 
-const API_BASE_URL = "https://deepak8157.app.n8n.cloud/webhook/risk-decisions";
+const API_BASE_URL = process.env.NEXT_PUBLIC_RISK_API_URL!;
 
 export async function fetchRiskDecisions(
     riskLevel: RiskLevel = 'all',
